@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Create or Edit Assigment";
+}
+
+@model Assigment
+
+<div class="text-center">
+    <h2>Create new assigment</h2>
+</div>
+
+<form asp-action="AddAssigment_OnAdd" asp-controller="Home">
+    <label>Title</label>
+    <input class="form-control" type="text" placeholder="Title" asp-for="AssigmentName" />
+
+    <label class="mt-3">Description</label>
+    <input class="form-control" type="text" placeholder="Desciption" asp-for="AssigmentDescription" />
+
+    <label class="mt-3">Date</label>
+    <input class="form-control" type="date" placeholder="Date" asp-for="AssigmentDate" />
+
+    <button class="btn btn-primary mt-3" type="submit">Add Assigment</button>
+</form>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeldatToDoInterviewTaskJO", "TeldatToDoInterviewTaskJO\TeldatToDoInterviewTaskJO.csproj", "{9AA3F88C-41A2-479F-8DBD-7C020940D1CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AA3F88C-41A2-479F-8DBD-7C020940D1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA3F88C-41A2-479F-8DBD-7C020940D1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA3F88C-41A2-479F-8DBD-7C020940D1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA3F88C-41A2-479F-8DBD-7C020940D1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19BBC0CD-C0D8-4BFF-8B72-3FD5A3A22BA9}
+	EndGlobalSection
+EndGlobal

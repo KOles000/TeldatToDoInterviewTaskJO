@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Assigments";
+}
+@model AssigmentsViewModel
+<div class="text-center">
+    <h1 class="display-4">To Do List</h1>
+    <a asp-controller="Home" asp-action="AddAssigment" class="btn btn-primary">Create new Assigment</a>
+</div>
+    
+
+<div style="width:20%; text-align: center; float: left; clear: right">
+    <form asp-controller="Home" asp-action="DateChosen">
+        <label>Date</label>
+        <input class="form-control" type="date" placeholder="Date" asp-for="@Model.chosenDate" />
+        <button  class="btn-info" type="submit">Refresh Assigments</button>
+    </form>
+</div>
+
+<div style="width:70%; text-align: center; float: right">
+    <p>Assigments for chosen date</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var assigment in Model.AssigmentsToday)
+                {
+                    <tr>
+                    <td>@assigment.AssigmentName</td>
+                    <td>@assigment.AssigmentDescription</td>
+                    <td>@Html.ActionLink(
+                        "Edit", "AddAssigment", "Home", new { id = assigment.AssigmentId }, new { @class = "btn btn-info" }
+                    )</td>
+                    <td>@Html.ActionLink(
+                        "Delete", "RemoveAssigment", "Home", new {id = assigment.AssigmentId}, new {@class = "btn btn-danger"}
+                    )</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <p>Assigments for next day</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var assigment in Model.AssigmentsTomorrow)
+                {
+                    <tr>
+                        <td>@assigment.AssigmentName</td>
+                        <td>@assigment.AssigmentDescription</td>
+                        <td>
+                            @Html.ActionLink(
+                                 "Edit", "AddAssigment", "Home", new { id = assigment.AssigmentId }, new { @class = "btn btn-info" }
+                                 )
+                        </td>
+                        <td>
+                            @Html.ActionLink(
+                                 "Delete", "RemoveAssigment", "Home", new { id = assigment.AssigmentId }, new { @class = "btn btn-danger" }
+                                 )
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
